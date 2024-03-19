@@ -3,5 +3,5 @@
     "board": "esp32:esp32:lolin32",
     "port": "COM7",
     "programmer": "esptool",
-    "sketch": "SOS.ino"
+    "sketch": "morseCode.ino"
 }
