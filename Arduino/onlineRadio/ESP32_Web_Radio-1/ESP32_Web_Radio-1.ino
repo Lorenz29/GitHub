@@ -14,7 +14,7 @@
 #define VS1053_DCS   33  
 #define VS1053_DREQ  35 
 
-#define VOLUME  50 // volume level 0-100
+#define VOLUME  70 // volume level 0-100
 #define EEPROM_SIZE 2
 
 
@@ -32,9 +32,10 @@ char ssid[] = "Guay-Fai";            //  your network SSID (name)
 char pass[] = "calle39765";       // your network password
 
 // Few Radio Stations
-char *host[4] = {"radiostreaming.ert.gr","realfm.live24.gr", "secure1.live24.gr"};
-char *path[4] = {"/ert-kosmos","/realfm","/skai1003"};
-int   port[4] = {80,80,80};
+//char *host[4] = {"radiostreaming.ert.gr","realfm.live24.gr"};
+char *host[4] = {"cdn.instream.audio"}; //https://cdn.instream.audio/:9339/stream?in_device_id=wp-6e71a696-868d-4c23-ac8a-d9c4fa81e168
+char *path[4] = {"/stream?in_device_id=wp-6e71a696-868d-4c23-ac8a-d9c4fa81e168"};
+int   port[4] = {9339};
 
 int status = WL_IDLE_STATUS;
 WiFiClient  client;
@@ -154,8 +155,8 @@ void station_connect (int station_no ) {
     player.setVolume(VOLUME);
   }
 
-  void endNextionCommand()
-/**{
+/*  void endNextionCommand()
+{
   Serial.write(0xff);
   Serial.write(0xff);
   Serial.write(0xff);
