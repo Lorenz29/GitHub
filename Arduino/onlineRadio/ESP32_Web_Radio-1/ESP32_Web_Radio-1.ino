@@ -14,7 +14,7 @@
 #define VS1053_DCS   33  
 #define VS1053_DREQ  35 
 
-#define VOLUME  70 // volume level 0-100
+#define VOLUME  100 // volume level 0-100
 #define EEPROM_SIZE 2
 
 
